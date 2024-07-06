@@ -1,0 +1,88 @@
+::placeholder{
+    color: rgba(0, 0, 0, 0.5)
+}
+
+#body{
+    margin: 0;
+}
+
+#container{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: calc(50% - 200px);
+    margin-top: 150px;
+    border-radius: 5px;
+}
+
+.point{
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    font-family: Roboto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 1000;
+    user-select: none;
+    position: absolute;
+}
+
+.point:hover{
+    transform: scale(1.1);
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#container_svg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: visible;
+}
+
+.container_button{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 40px;
+    margin-left: calc(50% - 75px);
+    margin-top: 420px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 1000;
+    background-color: rgb(0, 255, 125);
+}
+
+.container_button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.container_input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120px;
+    height: 40px;
+    margin-left: calc(50% - 75px);
+    margin-top: 470px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 1000;
+    background-color: rgb(0, 255, 125);
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
