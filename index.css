@@ -1,5 +1,5 @@
 ::placeholder{
-    color: rgba(0, 0, 0, 0.5)
+    color: rgba(0, 0, 0, 0.6)
 }
 
 #body{
@@ -85,4 +85,57 @@
     padding-left: 15px;
     padding-right: 15px;
     
+}
+
+#bezier_factor{
+    background-color: white;
+    border: 2px solid rgb(0, 255, 125);
+    color: rgb(0, 0, 0);
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    25%{
+        transform: rotate(15deg);
+    }
+
+    50%{
+        transform: rotate(0deg);
+    }
+
+    75%{
+        transform:rotate(-15deg)
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+#delete_button{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-image: url(./assets/bxs-trash-alt.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 10px;
+    background-color: rgb(0, 0, 0);
+    margin-left: calc(50% - 25px);
+    margin-top: -100px;
+    animation: spin 0.8s infinite linear;
+    z-index: 4;
+}
+
+#delete_button:hover{
+    transition-duration: 0.2s;
+    scale: 1.1;
 }

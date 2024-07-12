@@ -9,6 +9,7 @@
 
     <body>
         <div id="container">
+            <p style="position: absolute; font-family: Roboto; margin-top: 550px; text-align: center;">The curve gets constructed from the lowest index point to the higesht index point, passing respectively through all the points in between.</p>
             <svg id="container_svg" width="400" height="400">
                 <line id="line0"></line>
                 <line id="line1"></line>
@@ -34,7 +35,13 @@
             </svg>
 
             <button class="container_button" id="add_point">Add Point</button>
-            <input class="container_input" type="number" id="bezier_factor" value="" placeholder="Bezier Factor..."></input>
+            <input class="container_input" type="number" id="bezier_factor" value="" placeholder="1">
+                <span style="position: absolute; left: 135px; top: 464px; background-color: white; padding-left: 8px; padding-right: 8px; font-family: Roboto; font-weight: 1000; font-size: 13px;">Bezier Factor</span>
+            </input>
+
+            <button id="delete_button">
+
+            </button>
         </div>
     </body>
 </html>

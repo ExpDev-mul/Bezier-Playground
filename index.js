@@ -66,20 +66,54 @@ for (let i = 0; i < total_lines; i++){
     CreateLine([0, 0], [0, 0], i)
 }
 
+const deleteButton = document.getElementById("delete_button")
+deleteButton.style.visibility = "hidden"
+
+deleteButton.addEventListener("mouseenter", () => {
+    if (dragPoint != null){
+        points[dragPoint]["div"].remove()
+        points.splice(dragPoint, 1)
+        isMouseDraggingPoint = false
+        for (let i = 0; i < points.length; i++){
+            points[i]["div"].innerHTML = i + 1
+        }
+
+        dragPoint = null
+        deleteButton.style.visibility = "hidden"
+    }
+})
+
+
 let isMouseDraggingPoint = false
 let dragPoint = null
+
+let getCurrIndex = function(div){
+    for (let i = 0; i < points.length; i++){
+        if (points[i]["div"] === div)
+        {
+            return i
+        }
+    }
+}
 
 
 function ApplyPointEvents(i){
     const div = points[i]["div"]
+
+    
+
     div.addEventListener("mousedown", (e) => {
+        i = getCurrIndex(div)
         dragPoint = i
         isMouseDraggingPoint = true
+        deleteButton.style.visibility = "visible"
     })
 
     div.addEventListener("mouseup", (e) => {
         dragPoint = null
         isMouseDraggingPoint = false
+        
+        deleteButton.style.visibility = "hidden"
     })
 }
 
